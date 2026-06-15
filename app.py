@@ -114,3 +114,5 @@ with col1:
 
 with col2:
     st.subheader(article["title"])
+
+    api_key = st.secrets["NEWS_API_KEY"]
