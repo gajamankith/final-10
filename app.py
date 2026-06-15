@@ -68,3 +68,36 @@ if st.button("Fetch News"):
 
     else:
         st.error("Invalid API Key")
+
+        sort_by = st.selectbox(
+    "Sort By",
+    ["publishedAt", "relevancy", "popularity"]
+)
+
+url = (
+    f"https://newsapi.org/v2/everything?"
+    f"q={keyword}&"
+    f"sortBy={sort_by}&"
+    f"pageSize={num_articles}&"
+    f"apiKey={api_key}"
+)
+
+page = st.sidebar.radio(
+    "Navigation",
+    ["Home", "Search News", "About"]
+)
+
+if page == "Home":
+    st.title("News Explorer")
+
+elif page == "Search News":
+    st.title("Search News")
+
+elif page == "About":
+    st.write("Built using Streamlit and NewsAPI")
+
+    st.metric(
+    "Articles Found",
+    len(data["articles"])
+)
+
