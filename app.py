@@ -101,3 +101,16 @@ elif page == "About":
     len(data["articles"])
 )
 
+st.set_page_config(
+    page_title="News Explorer",
+    page_icon="📰",
+    layout="wide"
+)
+
+col1, col2 = st.columns([1,2])
+
+with col1:
+    st.image(article["urlToImage"])
+
+with col2:
+    st.subheader(article["title"])

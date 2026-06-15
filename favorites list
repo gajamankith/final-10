@@ -1,0 +1,11 @@
+if "favorites" not in st.session_state:
+    st.session_state.favorites = []
+
+    if st.button(f"Save {article['title']}"):
+    st.session_state.favorites.append(article)
+
+
+    for item in st.session_state.favorites:
+    st.write(item["title"])
+
+    
