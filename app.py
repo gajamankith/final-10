@@ -76,8 +76,7 @@ if st.button("Fetch News"):
 
 url = (
     f"https://newsapi.org/v2/everything?"
-    keyword = "technology"  # Replace with actual logic to get the keyword
-url = f"q={keyword}&"
+    keyword = "technology"  
     f"q={keyword}&"
     f"sortBy={sort_by}&"
     f"pageSize={num_articles}&"
